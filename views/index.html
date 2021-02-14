@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
   <title>BG</title> 
-	<!--[if lte IE 8]>
-    	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
-	<![endif]-->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Milonga' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -17,20 +14,18 @@
 		    height: 100%;
 		    font-family: 'Milonga', cursive;
 		}
-		.leaflet-container .leaflet-control-zoom {
-		    margin-left: 13px;
-		    margin-top: 70px;
-		}
-		#map { z-index: 1;}
 		#title { z-index: 2; position: absolute; left: 10px; }
+		#board { z-index: 3; position: absolute; left: 50px; }
 	</style>	
 	
 </head>
 <body>
 	<h1 id="title">BG</h1>
 	<div id="board">
-        <p>2 2 2</p>
-        <p>4 3 2</p>
+        <p>-----------</p>
+        <p>2 2 2 2 2 1</p>
+        <p>4 3 2 1 0 9</p>
+        <p>-----------</p>
         </div>
 	<script>
 	</script>
