@@ -28,10 +28,10 @@
         const ctx = canvas.getContext('2d');
         const width = canvas.width;
         const height = canvas.height;
-        ctx.strokeStyle = 'yellow';
+        ctx.strokeStyle = 'rgb(0, 0, 0)';
         ctx.lineWidth = 3;
         ctx.strokeRect(0, 0, width, height);
-        ctx.fillStyle = 'rgb(0, 0, 255)';
+        ctx.fillStyle = 'yellow';
         ctx.beginPath();
         ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
         ctx.fill();
