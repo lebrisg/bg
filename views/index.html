@@ -38,7 +38,7 @@
         ctx.lineWidth = 3;
         ctx.strokeRect(0, 0, width, height);
 
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = 'rgb(50,50,255)';
         ctx.beginPath();
         ctx.arc(50, 106, 50, degToRad(0), degToRad(360), false);
         ctx.fill()
@@ -46,7 +46,7 @@
         ctx.fillStyle = 'yellow';
         ctx.beginPath();
         ctx.arc(100, 106, 50, degToRad(-45), degToRad(45), true);
-        ctx.lineTo(200,106);
+        ctx.lineTo(100,106);
         ctx.fill();
 
         ctx.strokeStyle = 'white';
