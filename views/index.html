@@ -38,11 +38,7 @@
         ctx.lineWidth = 3;
         ctx.strokeRect(0, 0, width, height);
 
-        ctx.fillStyle = 'white';
-        ctx.beginPath();
-        ctx.arc(10, 10, 10, 0, 2 * Math.PI);
-        ctx.fill()
-
+        displayPiece(10, 10, 'white');
         displayPiece(20, 20, 'black');
 
         ctx.strokeStyle = 'white';
