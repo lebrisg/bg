@@ -38,13 +38,9 @@
         ctx.lineWidth = 3;
         ctx.strokeRect(0, 0, width, height);
 
+        ctx.fillStyle = 'white';
         ctx.beginPath();
-        ctx.arc(75, 75, 50, 0, 2 * Math.PI);
-        ctx.stroke();
- 
-        ctx.fillStyle = 'red';
-        ctx.beginPath();
-        ctx.arc(50, 106, 50, 0, 2 * Math.PI);
+        ctx.arc(50, 106, 10, 0, 2 * Math.PI);
         ctx.fill()
 
         ctx.fillStyle = 'yellow';
