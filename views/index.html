@@ -43,19 +43,19 @@
         ctx.arc(10, 10, 10, 0, 2 * Math.PI);
         ctx.fill()
 
-        ctx.fillStyle = 'black';
-        ctx.beginPath();
-        ctx.arc(100, 106, 10, 0, 2 * Math.PI);
-        ctx.fill();
+        displayPiece(20, 20, 'black');
 
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 1;
         ctx.font = '12px Space Mono';
         ctx.strokeText('Canvas text', 50, 50);
 
-        ctx.fillStyle = 'red';
-        ctx.font = '12px Space Mono';
-        ctx.fillText('Canvas text', 50, 150);
+        function displayPiece(x, y, color){
+          ctx.fillStyle = color;
+          ctx.beginPath();
+          ctx.arc(x, y, 10, 0, 2 * Math.PI);
+          ctx.fille();
+        }; 
 	</script>
 </body>
 </html>
