@@ -38,6 +38,10 @@
         ctx.lineWidth = 3;
         ctx.strokeRect(0, 0, width, height);
 
+        ctx.beginPath();
+        ctx.arc(75, 75, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+ 
         ctx.fillStyle = 'rgb(50,50,255)';
         ctx.beginPath();
         ctx.arc(50, 106, 50, degToRad(0), degToRad(360), false);
