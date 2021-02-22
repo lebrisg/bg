@@ -42,17 +42,15 @@
         ctx.arc(75, 75, 50, 0, 2 * Math.PI);
         ctx.stroke();
  
-        ctx.fillStyle = 'rgb(50,50,255)';
+        ctx.fillStyle = 'red';
         ctx.beginPath();
         ctx.arc(50, 106, 50, 0, 2 * Math.PI);
-        //ctx.arc(50, 106, 50, 0, 2 * Math.PI);
-        ctx.stroke()
+        ctx.fill()
 
         ctx.fillStyle = 'yellow';
         ctx.beginPath();
-        ctx.arc(100, 106, 50, degToRad(-45), degToRad(45), true);
-        ctx.lineTo(100,106);
-        ctx.stroke();
+        ctx.arc(100, 106, 50, 0, 2 * Math.PI);
+        ctx.fill();
 
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 1;
