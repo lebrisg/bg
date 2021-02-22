@@ -57,15 +57,7 @@
 
         function displayBoard(){
           for(var i = 0; i < 24; i++){
-            if(board[i]!=0){
-              if(board[i]>0){
-                color = 'white';
-              } 
-              else {
-                color = 'black';
-              }
-              displayPiece(i*10, 100, color);
-            };
+            displayPiece(i*10, 100, 'white');
           };
         };
 	</script>
