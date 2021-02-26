@@ -59,11 +59,13 @@
         }; 
 
         function displayBoard(){
-          for (var i = 0; i < 24; i++){
+          for (var i = 0; i < 24; i++) {
             k = i*10;
             if(board[i]>0) { 
               displayPiece(k+10, 100, 'white');
-            };
+            } else {
+              displayPiece(x+10, 100, 'black'};
+            }
           };
         };
 	</script>
