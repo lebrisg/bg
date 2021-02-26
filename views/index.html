@@ -59,13 +59,17 @@
         }; 
 
         function displayBoard() {
+          y = 100;
           for (var i = 0; i < 24; i++) {
+            if(i>11) {
+              y = 200;
+            }
             k = i*20;
             if(board[i]>0) { 
-              displayPiece(k+10, 100, 'white');
+              displayPiece(k+10, y, 'white');
             }
             if(board[i]<0) {
-              displayPiece(k+10, 100, 'black');
+              displayPiece(k+10, y, 'black');
             }
           };
         };
