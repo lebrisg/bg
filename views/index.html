@@ -60,10 +60,12 @@
 
         function displayBoard() {
           y = 100;
+          position = 1;
           for (var i = 0; i < 24; i++) {
             nbPieces = board[i];
             k = i*20;
             if(i>11) {
+              position = -1;
               y = 300;
               k = (i-12)*20;
             }
@@ -73,7 +75,9 @@
               } else {
                 color = 'black';
               }
-              displayPiece(k+10, y, color);
+              for(var z = 0; z < nbPieces; z++) {
+                displayPiece(k+10, y+position*z*20, color);
+              }
             }
           };
         };
