@@ -69,11 +69,14 @@
           for (var i = 0; i < 24; i++) {
             nbPieces = board[i];
             k = i*20;
+            l = 0;
             if(i>11) {
               position = -1;
               y = 300;
               k = (23-i)*20;
             }
+            if(i>5 && i<18) {
+              l = 20;
             if(nbPieces!=0) {
               if(nbPieces>0) { 
                 color = 'white';
@@ -82,7 +85,7 @@
                 color = 'black';
               }
               for(var z = 0; z < nbPieces; z++) {
-                displayPiece(k+13, y+position*z*20, color);
+                displayPiece(k+13+l, y+position*z*20, color);
               }
             }
           };
