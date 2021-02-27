@@ -85,6 +85,13 @@
                 nbPieces = -nbPieces;
                 color = 'black';
               }
+              ctx.beginPath();
+              ctx.fillStyle = 'blue';
+              ctx.moveTo(20,20);
+              ctx.lineTo(200,20);
+              ctx.lineTo(200,100);
+              ctx.lineTo(20,20);
+              ctx.fill();
               for(var z = 0; z < nbPieces; z++) {
                 displayPiece(k+13+l, y+position*z*20, color);
               }
