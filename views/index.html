@@ -46,12 +46,22 @@
         ctx.font = '12px Space Mono';
         ctx.strokeText('Canvas text', 50, 500);
 
-        function displayPiece(x, y, color){
+        function displayPiece(x, y, color) {
           ctx.fillStyle = color;
           ctx.beginPath();
           ctx.arc(x, y, 10, 0, 2 * Math.PI);
           ctx.fill();
         }; 
+
+        function displayArrow(x, y, color) {
+          ctx.beginPath();
+          ctx.fillStyle = color;
+          ctx.moveTo(0,88);
+          ctx.lineTo(10,188);
+          ctx.lineTo(20,88);
+          ctx.lineTo(0,88);
+          ctx.fill();
+        };
 
         function displayBoard() {
           ctx.fillStyle = 'green';
@@ -85,13 +95,7 @@
                 nbPieces = -nbPieces;
                 color = 'black';
               }
-              ctx.beginPath();
-              ctx.fillStyle = 'blue';
-              ctx.moveTo(0,88);
-              ctx.lineTo(10,188);
-              ctx.lineTo(20,88);
-              ctx.lineTo(0,88);
-              ctx.fill();
+              displayArrow(0, 0, 'blue');
               for(var z = 0; z < nbPieces; z++) {
                 displayPiece(k+13+l, y+position*z*20, color);
               }
