@@ -57,15 +57,15 @@
           ctx.beginPath();
           ctx.fillStyle = color;
           if(position == -1) {
-            ctx.moveTo(x+3,88);
-            ctx.lineTo(x+13,188);
-            ctx.lineTo(x+23,88);
-            ctx.lineTo(x+3,88);
+            ctx.moveTo(x+3,89);
+            ctx.lineTo(x+13,189);
+            ctx.lineTo(x+23,89);
+            ctx.lineTo(x+3,89);
           } else {
-            ctx.moveTo(x+3,310);
-            ctx.lineTo(x+13,210);
-            ctx.lineTo(x+23,310);
-            ctx.lineTo(x+3,310);
+            ctx.moveTo(x+3,309);
+            ctx.lineTo(x+13,209);
+            ctx.lineTo(x+23,309);
+            ctx.lineTo(x+3,309);
           }
           ctx.fill();
         };
@@ -83,7 +83,7 @@
 
           y = 100;
           position = 1;
-          arrowColor = 'lightgreen';
+          arrowColor = 'darkgreen';
           for (var numSlot = 0; numSlot < 24; numSlot++) {
             nbPieces = board[numSlot];
             k = numSlot*20;
