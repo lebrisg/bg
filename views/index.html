@@ -83,6 +83,7 @@
 
           y = 100;
           position = 1;
+          arrowColor = 'light green';
           for (var numSlot = 0; numSlot < 24; numSlot++) {
             nbPieces = board[numSlot];
             k = numSlot*20;
@@ -95,7 +96,7 @@
             if(numSlot > 5 && numSlot < 18) {
               l = 23;
             }
-            displayArrow(k+l, 0, -position, 'blue');
+            displayArrow(k+l, 0, -position, arrowColor);
             if(nbPieces!=0) {
               if(nbPieces>0) { 
                 color = 'white';
