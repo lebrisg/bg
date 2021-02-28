@@ -47,7 +47,7 @@
         ctx.strokeText('Canvas text', 50, 500);
 
         function displayPiece(x, y, color) {
-          ctx.fillStroke = 'black';
+          ctx.strokeStyle = 'black';
           ctx.fillStyle = color;
           ctx.beginPath();
           ctx.arc(x, y, 10, 0, 2 * Math.PI);
