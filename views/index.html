@@ -47,6 +47,7 @@
         ctx.strokeText('Canvas text', 50, 500);
 
         function displayPiece(x, y, color) {
+          ctx.fillStroke = 'black';
           ctx.fillStyle = color;
           ctx.beginPath();
           ctx.arc(x, y, 10, 0, 2 * Math.PI);
@@ -104,7 +105,7 @@
             }
             if(nbPieces!=0) {
               if(nbPieces>0) { 
-                color = 'grey';
+                color = 'white';
               } else {
                 nbPieces = -nbPieces;
                 color = 'black';
