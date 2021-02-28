@@ -56,10 +56,10 @@
         function displayArrow(x, y, color) {
           ctx.beginPath();
           ctx.fillStyle = color;
-          ctx.moveTo(x+2,88);
-          ctx.lineTo(x+12,188);
-          ctx.lineTo(x+22,88);
-          ctx.lineTo(x+2,88);
+          ctx.moveTo(x+3,88);
+          ctx.lineTo(x+13,188);
+          ctx.lineTo(x+23,88);
+          ctx.lineTo(x+3,88);
           ctx.fill();
         };
 
@@ -88,6 +88,7 @@
             if(i>5 && i<18) {
               l = 23;
             }
+            displayArrow(k+l, 0, 'blue');
             if(nbPieces!=0) {
               if(nbPieces>0) { 
                 color = 'white';
@@ -95,7 +96,6 @@
                 nbPieces = -nbPieces;
                 color = 'black';
               }
-              displayArrow(k+l, 0, 'blue');
               for(var z = 0; z < nbPieces; z++) {
                 displayPiece(k+13+l, y+position*z*20, color);
               }
