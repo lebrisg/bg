@@ -53,13 +53,20 @@
           ctx.fill();
         }; 
 
-        function displayArrow(x, y, color) {
+        function displayArrow(x, y, position, color) {
           ctx.beginPath();
           ctx.fillStyle = color;
-          ctx.moveTo(x+3,88);
-          ctx.lineTo(x+13,188);
-          ctx.lineTo(x+23,88);
-          ctx.lineTo(x+3,88);
+          if(position == -1) {
+            ctx.moveTo(x+3,88);
+            ctx.lineTo(x+13,188);
+            ctx.lineTo(x+23,88);
+            ctx.lineTo(x+3,88);
+          } else {
+            ctx.moveTo(x+3,300);
+            ctx.lineTo(x+13,200);
+            ctx.lineTo(x+23,300);
+            ctx.lineTo(x+3,300);
+          }
           ctx.fill();
         };
 
@@ -88,7 +95,7 @@
             if(numSlot > 5 && numSlot < 18) {
               l = 23;
             }
-            displayArrow(k+l, 0, 'blue');
+            displayArrow(k+l, 0, -position, 'blue');
             if(nbPieces!=0) {
               if(nbPieces>0) { 
                 color = 'white';
