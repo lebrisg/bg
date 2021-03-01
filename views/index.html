@@ -87,7 +87,8 @@
           ctx.strokeStyle = 'black';
           ctx.lineWidth = 1;
           ctx.strokeRect(x, y, janWidth, janHeight);
-          ctx.strokeRect(x+janWidth, y, barWidth, janHeight);
+          ctx.fillStyle = 'brown';
+          ctx.Rect(x+janWidth, y, barWidth, janHeight);
           ctx.strokeRect(x+janWidth+barWidth, y, janWidth, janHeight);
 
           line = y+diameter/2+2;
