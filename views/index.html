@@ -58,17 +58,19 @@
         }; 
 
         function displayArrow(x, y, position, color) {
+          const diameter = 20;
+
           ctx.beginPath();
           ctx.fillStyle = color;
           if(position == -1) {
             ctx.moveTo(x,89);
-            ctx.lineTo(x+10,189);
-            ctx.lineTo(x+20,89);
+            ctx.lineTo(x+diameter/2,189);
+            ctx.lineTo(x+diameter,89);
             ctx.lineTo(x,89);
           } else {
             ctx.moveTo(x,310);
-            ctx.lineTo(x+10,210);
-            ctx.lineTo(x+20,310);
+            ctx.lineTo(x+diameter/2,210);
+            ctx.lineTo(x+diameter,310);
             ctx.lineTo(x,310);
           }
           ctx.fill();
