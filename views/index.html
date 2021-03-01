@@ -83,8 +83,8 @@
           ctx.strokeStyle = 'black';
           ctx.lineWidth = 1;
           ctx.strokeRect(x, y, 124, janHeight);
-          ctx.strokeRect(x+124, y, 20, janHeight);
-          ctx.strokeRect(x+144, y, 124, janHeight);
+          ctx.strokeRect(x+janWidth, y, diameter, janHeight);
+          ctx.strokeRect(x+janWidth+diameter, y, janWidth+diameter, janHeight);
 
           line = y+12;
           position = 1;
