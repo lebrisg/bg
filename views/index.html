@@ -78,6 +78,7 @@
           const janWidth = 6*diameter+4;  
           const janHeight = 11*diameter+4;
           const barWidth = diameter;
+          const arcOffset = diameter/2;
 
           ctx.fillStyle = 'green';
           ctx.fillRect(x, y, 2*janWidth+barWidth, janHeight);
@@ -98,11 +99,11 @@
               line = y+janHeight-diameter/2-2;
               k = (23-numSlot)*diameter;
             }
-            offsetx = diameter/2+3;
+            offsetx = 3;
             if(numSlot > 5 && numSlot < 18) {
-              offsetx = diameter/2+barWidth+6;
+              offsetx = barWidth+6;
             }
-            displayArrow(k+offsetx-diameter/2-3, 0, -position, arrowColor);
+            displayArrow(k+offsetx+arcOffset-3, 0, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
             } else {
@@ -116,7 +117,7 @@
                 color = 'black';
               }
               for(var numPiece = 0; numPiece < nbPieces; numPiece++) {
-                displayPiece(x+k+offsetx, line+position*numPiece*diameter, color);
+                displayPiece(x+k+offsetx+arcOffset, line+position*numPiece*diameter, color);
               }
             }
           };
