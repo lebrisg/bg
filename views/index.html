@@ -82,11 +82,11 @@
           ctx.fillRect(x, y, 268, janHeight);
           ctx.strokeStyle = 'black';
           ctx.lineWidth = 1;
-          ctx.strokeRect(x, y, 124, janHeight);
+          ctx.strokeRect(x, y, janWidth, janHeight);
           ctx.strokeRect(x+janWidth, y, diameter, janHeight);
           ctx.strokeRect(x+janWidth+diameter, y, janWidth, janHeight);
 
-          line = y+12;
+          line = y+diameter/2+2;
           position = 1;
           arrowColor = 'darkgreen';
           for (var numSlot = 0; numSlot < 24; numSlot++) {
@@ -95,7 +95,7 @@
             l = 0;
             if(numSlot > 11) {
               position = -1;
-              line = y+212;
+              line = y+JanHeight-diameter/2-2;
               k = (23-numSlot)*diameter;
             }
             if(numSlot > 5 && numSlot < 18) {
