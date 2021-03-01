@@ -98,9 +98,9 @@
               line = y+janHeight-diameter/2-2;
               k = (23-numSlot)*diameter;
             }
-            offsetx = 0;
+            offsetx = diameter/2+3;
             if(numSlot > 5 && numSlot < 18) {
-              offsetx = barWidth+3;
+              offsetx = diameter/2+barWidth+6;
             }
             displayArrow(k+offsetx, 0, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
@@ -116,7 +116,7 @@
                 color = 'black';
               }
               for(var numPiece = 0; numPiece < nbPieces; numPiece++) {
-                displayPiece(k+13+offsetx, line+position*numPiece*diameter, color);
+                displayPiece(x+k+offsetx, line+position*numPiece*diameter, color);
               }
             }
           };
