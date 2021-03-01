@@ -41,7 +41,7 @@
         ctx.lineWidth = 3;
         ctx.strokeRect(0, 0, width, height);
 
-        displayBoard();
+        displayBoard(0, 100);
 
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 1;
@@ -74,7 +74,7 @@
           ctx.fill();
         };
 
-        function displayBoard() {
+        function displayBoard(x, y) {
           ctx.fillStyle = 'green';
           ctx.fillRect(0, 0, width, height);
           ctx.strokeStyle = 'black';
@@ -85,7 +85,7 @@
           ctx.strokeRect(124, 88, 20, 223);
           ctx.strokeRect(144, 88, 124, 223);
 
-          y = 100;
+          line = y;
           position = 1;
           arrowColor = 'darkgreen';
           for (var numSlot = 0; numSlot < 24; numSlot++) {
@@ -94,7 +94,7 @@
             l = 0;
             if(numSlot > 11) {
               position = -1;
-              y = 300;
+              line = 300;
               k = (23-numSlot)*diameter;
             }
             if(numSlot > 5 && numSlot < 18) {
@@ -114,7 +114,7 @@
                 color = 'black';
               }
               for(var numPiece = 0; numPiece < nbPieces; numPiece++) {
-                displayPiece(k+13+l, y+position*numPiece*diameter, color);
+                displayPiece(k+13+l, line+position*numPiece*diameter, color);
               }
             }
           };
