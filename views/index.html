@@ -63,10 +63,10 @@
           ctx.beginPath();
           ctx.fillStyle = color;
           if(position == -1) {
-            ctx.moveTo(x,89);
-            ctx.lineTo(x+diameter/2,189);
-            ctx.lineTo(x+diameter,89);
-            ctx.lineTo(x,89);
+            ctx.moveTo(x, y);
+            ctx.lineTo(x+diameter/2, 5*diameter);
+            ctx.lineTo(x+diameter, y);
+            ctx.lineTo(x, y);
           } else {
             ctx.moveTo(x,310);
             ctx.lineTo(x+diameter/2,210);
@@ -105,7 +105,7 @@
             if(numSlot > 5 && numSlot < 18) {
               offsetx = barWidth+6;
             }
-            displayArrow(k+offsetx, 0, -position, arrowColor);
+            displayArrow(k+offsetx, y+3, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
             } else {
