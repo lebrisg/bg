@@ -41,7 +41,7 @@
         //ctx.lineWidth = 3;
         //ctx.strokeRect(0, 0, width, height);
 
-        displayBoard(0, 100);
+        displayBoard(0, 88);
 
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 1;
@@ -76,16 +76,16 @@
 
         function displayBoard(x, y) {
           ctx.fillStyle = 'green';
-          ctx.fillRect(0, 88, 268, 223);
+          ctx.fillRect(x, y, 268, 223);
           ctx.strokeStyle = 'black';
           ctx.lineWidth = 3;
           //ctx.strokeRect(0, 0, width, height);
           ctx.lineWidth = 1;
-          ctx.strokeRect(0, 88, 124, 223);
-          ctx.strokeRect(124, 88, 20, 223);
-          ctx.strokeRect(144, 88, 124, 223);
+          ctx.strokeRect(x, y, 124, 223);
+          ctx.strokeRect(124, y, 20, 223);
+          ctx.strokeRect(144, y, 124, 223);
 
-          line = y;
+          line = y+12;
           position = 1;
           arrowColor = 'darkgreen';
           for (var numSlot = 0; numSlot < 24; numSlot++) {
@@ -94,7 +94,7 @@
             l = 0;
             if(numSlot > 11) {
               position = -1;
-              line = 300;
+              line = y+212;
               k = (23-numSlot)*diameter;
             }
             if(numSlot > 5 && numSlot < 18) {
