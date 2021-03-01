@@ -98,11 +98,11 @@
               line = y+janHeight-diameter/2-2;
               k = (23-numSlot)*diameter;
             }
-            offset = 0;
+            offsetx = 0;
             if(numSlot > 5 && numSlot < 18) {
-              offset = barWidth+3;
+              offsetx = barWidth+3;
             }
-            displayArrow(k+offset, 0, -position, arrowColor);
+            displayArrow(k+offsetx, 0, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
             } else {
@@ -116,7 +116,7 @@
                 color = 'black';
               }
               for(var numPiece = 0; numPiece < nbPieces; numPiece++) {
-                displayPiece(k+13+offset, line+position*numPiece*diameter, color);
+                displayPiece(k+13+offsetx, line+position*numPiece*diameter, color);
               }
             }
           };
