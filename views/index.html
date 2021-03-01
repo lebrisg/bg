@@ -32,7 +32,7 @@
         const width = canvas.width;
         const height = canvas.height;
         const diameter = 20;
-        const 2PI = 2 * Math.PI;
+        const twoPI = 2 * Math.PI;
 
         ctx.fillStyle = 'green';
         ctx.fillRect(0, 0, width, height);
@@ -52,7 +52,7 @@
           ctx.strokeStyle = 'black';
           ctx.fillStyle = color;
           ctx.beginPath();
-          ctx.arc(x, y, diameter/2, 0, 2PI);
+          ctx.arc(x, y, diameter/2, 0, twoPI);
           ctx.fill();
           ctx.stroke();
         }; 
