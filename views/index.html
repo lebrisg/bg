@@ -58,7 +58,7 @@
         }; 
 
         function displayArrow(x, y, position, color) {
-          const diameter = 20;
+          const offset = diameter/2;
 
           ctx.beginPath();
           ctx.fillStyle = color;
@@ -68,10 +68,10 @@
             ctx.lineTo(x+diameter, y);
             ctx.lineTo(x, y);
           } else {
-            ctx.moveTo(x,310);
-            ctx.lineTo(x+diameter/2,210);
-            ctx.lineTo(x+diameter,310);
-            ctx.lineTo(x,310);
+            ctx.moveTo(x, y+diameter*11);
+            ctx.lineTo(x+diameter/2, y+diameter*6);
+            ctx.lineTo(x+diameter, y+diameter*11);
+            ctx.lineTo(x, y+diameter*11);
           }
           ctx.fill();
         };
@@ -105,7 +105,7 @@
             if(numSlot > 5 && numSlot < 18) {
               offsetx = barWidth+6;
             }
-            displayArrow(k+offsetx, y+3, -position, arrowColor);
+            displayArrow(k+offsetx, y+1, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
             } else {
