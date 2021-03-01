@@ -75,15 +75,16 @@
         };
 
         function displayBoard(x, y) {
+          const janWidth = 6*diameter+4;  
+          const janHeight = 11*diameter+4;
+
           ctx.fillStyle = 'green';
-          ctx.fillRect(x, y, 268, 223);
+          ctx.fillRect(x, y, 268, janHeight);
           ctx.strokeStyle = 'black';
-          ctx.lineWidth = 3;
-          //ctx.strokeRect(0, 0, width, height);
           ctx.lineWidth = 1;
-          ctx.strokeRect(x, y, 124, 223);
-          ctx.strokeRect(124, y, 20, 223);
-          ctx.strokeRect(144, y, 124, 223);
+          ctx.strokeRect(x, y, 124, janHeight);
+          ctx.strokeRect(x+124, y, 20, janHeight);
+          ctx.strokeRect(x+144, y, 124, janHeight);
 
           line = y+12;
           position = 1;
