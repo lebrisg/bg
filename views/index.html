@@ -61,15 +61,15 @@
           ctx.beginPath();
           ctx.fillStyle = color;
           if(position == -1) {
-            ctx.moveTo(x+3,89);
-            ctx.lineTo(x+13,189);
-            ctx.lineTo(x+23,89);
-            ctx.lineTo(x+3,89);
+            ctx.moveTo(x,89);
+            ctx.lineTo(x+10,189);
+            ctx.lineTo(x+20,89);
+            ctx.lineTo(x,89);
           } else {
-            ctx.moveTo(x+3,310);
-            ctx.lineTo(x+13,210);
-            ctx.lineTo(x+23,310);
-            ctx.lineTo(x+3,310);
+            ctx.moveTo(x,310);
+            ctx.lineTo(x+10,210);
+            ctx.lineTo(x+20,310);
+            ctx.lineTo(x,310);
           }
           ctx.fill();
         };
@@ -103,7 +103,7 @@
             if(numSlot > 5 && numSlot < 18) {
               offsetx = barWidth+6;
             }
-            displayArrow(k, 0, -position, arrowColor);
+            displayArrow(k+offsetx, 0, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
             } else {
