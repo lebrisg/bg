@@ -77,7 +77,7 @@
         };
 
         function displayBoard(x, y) {
-          const janWidth = 6*diameter+4;  
+          const janWidth = 6*diameter+2;  
           const janHeight = 11*diameter+2;
           const barWidth = diameter;
           const arcOffset = diameter/2;
@@ -88,9 +88,9 @@
           ctx.strokeStyle = 'black';
           ctx.strokeRect(x+1, y+1, janWidth-2, janHeight-2);
           ctx.fillStyle = 'brown';
-          ctx.strokeStyle = 'brown';
-          //ctx.fillRect(x+janWidth, y, barWidth, janHeight);
-          ctx.strokeStyle = 'black';
+          //ctx.strokeStyle = 'brown';
+          ctx.fillRect(x+janWidth, y, barWidth, janHeight);
+          //ctx.strokeStyle = 'black';
           //ctx.strokeRect(x+janWidth+barWidth, y, janWidth, janHeight);
 
           line = y+diameter/2+2;
