@@ -86,12 +86,12 @@
           ctx.fillRect(x, y, 2*janWidth+barWidth, janHeight);
           ctx.strokeStyle = 'black';
           ctx.lineWidth = 1;
-          ctx.strokeRect(x, y, janWidth, janHeight);
+          //ctx.strokeRect(x, y, janWidth, janHeight);
           ctx.fillStyle = 'brown';
           ctx.strokeStyle = 'brown';
-          ctx.fillRect(x+janWidth, y, barWidth, janHeight);
+          //ctx.fillRect(x+janWidth, y, barWidth, janHeight);
           ctx.strokeStyle = 'black';
-          ctx.strokeRect(x+janWidth+barWidth, y, janWidth, janHeight);
+          //ctx.strokeRect(x+janWidth+barWidth, y, janWidth, janHeight);
 
           line = y+diameter/2+2;
           position = 1;
@@ -108,7 +108,7 @@
             if(numSlot > 5 && numSlot < 18) {
               offsetx = barWidth+6;
             }
-            displayArrow(x+k+offsetx, y+1, -position, arrowColor);
+            //displayArrow(x+k+offsetx, y+1, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
             } else {
@@ -122,7 +122,7 @@
                 color = 'black';
               }
               for(var numPiece = 0; numPiece < nbPieces; numPiece++) {
-                displayPiece(x+k+offsetx+arcOffset, line+position*numPiece*diameter, color);
+                //displayPiece(x+k+offsetx+arcOffset, line+position*numPiece*diameter, color);
               }
             }
           };
