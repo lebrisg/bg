@@ -105,7 +105,7 @@
             }
             offsetx = 1;
             if(numSlot > 5 && numSlot < 18) {
-              offsetx = barWidth+6;
+              offsetx = barWidth+4;
             }
             displayArrow(x+posSlot+offsetx, y+1, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
@@ -121,7 +121,7 @@
                 color = 'black';
               }
               for(var numPiece = 0; numPiece < nbPieces; numPiece++) {
-                //displayPiece(x+posSlot+offsetx+arcOffset, line+position*numPiece*diameter, color);
+                displayPiece(x+posSlot+offsetx+arcOffset, line+position*numPiece*diameter, color);
               }
             }
           };
