@@ -86,8 +86,7 @@
           ctx.fillStyle = 'green';
           ctx.fillRect(x, y, 2*janWidth+barWidth, janHeight);
           ctx.strokeStyle = 'black';
-          ctx.lineWidth = 1;
-          ctx.strokeRect(x, y, janWidth, janHeight);
+          ctx.strokeRect(x+1, y+1, janWidth-2, janHeight-2);
           ctx.fillStyle = 'brown';
           ctx.strokeStyle = 'brown';
           //ctx.fillRect(x+janWidth, y, barWidth, janHeight);
