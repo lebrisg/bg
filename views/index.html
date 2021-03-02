@@ -82,11 +82,12 @@
           const barWidth = diameter;
           const arcOffset = diameter/2;
 
+          ctx.lineWidth = 1;
           ctx.fillStyle = 'green';
           ctx.fillRect(x, y, 2*janWidth+barWidth, janHeight);
           ctx.strokeStyle = 'black';
           ctx.lineWidth = 1;
-          //ctx.strokeRect(x, y, janWidth, janHeight);
+          ctx.strokeRect(x, y, janWidth, janHeight);
           ctx.fillStyle = 'brown';
           ctx.strokeStyle = 'brown';
           //ctx.fillRect(x+janWidth, y, barWidth, janHeight);
