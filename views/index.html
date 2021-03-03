@@ -92,11 +92,11 @@
           arrowColor = 'darkgreen';
           for (var numSlot = 23; numSlot >= 0; numSlot--) {
             nbPieces = board[numSlot];
-            posSlot = numSlot*diameter;
+            posSlot = (23-numSlot)*diameter;
             if(numSlot < 12) {
               position = -1;
               line = y+janHeight-diameter/2-1;
-              posSlot = (23-numSlot)*diameter;
+              posSlot = numSlot*diameter;
             }
             offsetx = 1;
             if(numSlot < 6 || numSlot > 17) {
