@@ -34,19 +34,14 @@
         const diameter = 20;
         const twoPI = 2 * Math.PI;
 
-        //ctx.fillStyle = 'green';
-        //ctx.fillRect(0, 0, width, height);
-
-        //ctx.strokeStyle = 'black';
-        //ctx.lineWidth = 3;
-        //ctx.strokeRect(0, 0, width, height);
-
         displayBoard(20, 100);
 
-        ctx.strokeStyle = 'white';
-        ctx.lineWidth = 1;
-        ctx.font = '12px Space Mono';
-        ctx.strokeText('Canvas text', 50, 500);
+        function displayNumPiece(x, y) {
+          ctx.strokeStyle = 'white';
+          ctx.lineWidth = 1;
+          ctx.font = '12px Space Mono';
+          ctx.strokeText('Canvas text', x, y);
+        }
 
         function displayPiece(x, y, color) {
           ctx.strokeStyle = 'black';
