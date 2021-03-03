@@ -36,11 +36,11 @@
 
         displayBoard(20, 100);
 
-        function displayNumPiece(x, y) {
+        function displayNumPiece(x, y, numPiece) {
           ctx.strokeStyle = 'white';
           ctx.lineWidth = 1;
           ctx.font = '12px Space Mono';
-          ctx.strokeText('Canvas text', x, y);
+          ctx.strokeText(numPiece, x, y);
         }
 
         function displayPiece(x, y, color) {
@@ -102,6 +102,7 @@
             if(numSlot > 5 && numSlot < 18) {
               offsetx = barWidth+5;
             }
+            displayNumPiece(x, y, numSlot+1);
             displayArrow(x+posSlot+offsetx, y+1, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
