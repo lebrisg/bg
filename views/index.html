@@ -90,10 +90,10 @@
           line = y+diameter/2+1;
           position = 1;
           arrowColor = 'darkgreen';
-          for (var numSlot = 0; numSlot < 24; numSlot++) {
+          for (var numSlot = 23; numSlot >= 0; numSlot--) {
             nbPieces = board[numSlot];
             posSlot = numSlot*diameter;
-            if(numSlot > 11) {
+            if(numSlot < 12) {
               position = -1;
               line = y+janHeight-diameter/2-1;
               posSlot = (23-numSlot)*diameter;
