@@ -102,7 +102,9 @@
             if(numSlot > 5 && numSlot < 18) {
               offsetx = barWidth+5;
             }
-            displayNumPiece(x+posSlot+offsetx, y, numSlot+1);
+            if(numSlot > 12) {
+              displayNumPiece(x+posSlot+offsetx, y, numSlot+1);
+            } 
             displayArrow(x+posSlot+offsetx, y+1, -position, arrowColor);
             if(arrowColor == 'lightgreen') {
               arrowColor = 'darkgreen';
