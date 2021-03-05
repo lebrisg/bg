@@ -125,8 +125,27 @@
                 displayPiece(x+posSlot+offsetx+arcOffset, line+position*numPiece*diameter, color);
               }
             }
-          };
+          }
+          //displayPips(x+janWidth*2+barWidth, y);
         };
+
+        function displayPips(x, y) {
+            var sumW = 0;
+            var sumB = 0;
+            for(var slot = 0; slot < 24; slot++) {
+                val = board[slot];
+                if(val > 0) {
+                    sumW += (slot+1)*val;
+                } else {
+                    sumB -= (slot+1)*val;
+                }
+            }
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 1;
+            ctx.font = '12px Space Mono';
+            ctx.strokeText(sumW, x, y);
+            ctx.strokeText(sumB, x, y+diameter);
+        }
 	</script>
 </body>
 </html>
